@@ -39,10 +39,11 @@ holds(T+1, Fluent) :- time(T),
                       exec(T, Action),
                       action_add(Action, Fluent).
 
-% Or if it was true and it was not made false by the  last action.
+% Or if it was true and it was not made false by the last action.
 holds(T+1, Fluent) :- time(T),
                       holds(T, Fluent),
-                      not exec(T, Action).
+                      exec(T, Action),
+                      not action_del(Action, Fluent).
 
 
 % Problem definition
