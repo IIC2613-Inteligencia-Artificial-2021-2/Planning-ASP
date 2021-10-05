@@ -41,9 +41,8 @@ holds(T+1, Fluent) :- time(T),
 
 % Or if it was true and it was not made false by the  last action.
 holds(T+1, Fluent) :- time(T),
-                      agent(Agent),
                       holds(T, Fluent),
-                      not exec(T, Agent, Action).
+                      not exec(T, Action).
 
 
 % Problem definition
