@@ -7,7 +7,8 @@ x(0..7).
 start(at(0)).
 goal(at(7)).
 
-holds(2, red).
-holds(3, red).
-holds(5, red).
-holds(7, red).
+% https://github.com/IIC2613-Inteligencia-Artificial-2021-2/Syllabus/issues/86
+isRed(2).
+isRed(3).
+isRed(5).
+isRed(7).
